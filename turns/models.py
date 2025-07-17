@@ -9,7 +9,7 @@ class ReservationDay(models.Model):
     class Meta:
         verbose_name = _("Reservation Day")
         verbose_name_plural = _("Reservation Days")
-        ordering = ('-date')
+        ordering = ('-date',)
 
     def __str__(self):
         return str(self.date)
@@ -23,8 +23,7 @@ class Reservation(models.Model):
     class Meta:
         verbose_name = _("Reservation")
         verbose_name_plural = _("Reservations")
-        ordering = ('-time')
+        ordering = ('-time',)
 
     def __str__(self):
         return f"{self.user} - {self.day} - {self.time}"
-    
